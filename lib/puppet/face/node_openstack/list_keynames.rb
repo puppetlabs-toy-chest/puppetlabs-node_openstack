@@ -5,16 +5,16 @@ Puppet::Face.define :node_openstack, '0.0.1' do
 
   action :list_keynames do
 
-    summary 'List available OpenStack key names.'
+    summary 'List available key names.'
 
     description <<-'EOT'
-      This action lists the available OpenStack key names and their fingerprints.
+      Lists the available key names and their fingerprints.
       These keynames are specific to the specified endpoint.
-      Any key name from this list is a valid argument for the create action's
-      --keyname option.
+      Any key name from this list is a valid argument for the `create` action's
+      `--keyname` option.
     EOT
 
-    Puppet::CloudPack.add_list_keynames_options(self)
+    Puppet::CloudPack.add_platform_option(self)
 
     when_invoked do |options|
       Puppet::CloudPack.list_keynames(options)

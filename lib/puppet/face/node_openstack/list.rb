@@ -7,13 +7,12 @@ Puppet::Face.define :node_openstack, '0.0.1' do
 
     summary 'List machine instances.'
     description <<-EOT
-      This action obtains a list of instances from the OpenStack API and
+      Obtains a list of instances from the specified endpoint and
       displays them on the console. Only the instances being managed
-      by the specified nova api endpoint are listed.
+      by that endpoint are listed.
     EOT
 
     Puppet::CloudPack.add_platform_option(self)
-    Puppet::CloudPack.add_region_option(self)
 
     when_invoked do |options|
       Puppet::CloudPack.list(options)

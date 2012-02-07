@@ -5,18 +5,22 @@ Puppet::Face.define :node_openstack, '0.0.1' do
 
   action :terminate do
 
-    summary 'Terminate an OpenStack machine instance.'
+    summary 'Terminate machine instance.'
     description <<-EOT
       Terminate the instance identified by <instance_id>.
     EOT
 
     arguments '<instance_id>'
 
-    Puppet::CloudPack.add_terminate_options(self)
+    Puppet::CloudPack.add_platform_option(self)
+
+    option '--force', '-f' do
+      summary 'Forces termination of an instance.'
+    end
 
     when_invoked do |server, options|
-      # right now this is hard coded
-      Puppet::CloudPack.terminate(server, options, 'instance-id')
+      options[:terminate_id] = 'instance-id'
+      Puppet::CloudPack.terminate(server, options)
     end
   end
 end

@@ -1,10 +1,4 @@
-
-Ensure that your api is up:
-
 http://172.21.0.19:8773/services/Cloud
-http://172.21.0.19:8773/services/Admin
-
-set your credentials in fog, double check them and also check them using:
 
 it does not detect when the machine goes into an error state
 
@@ -18,5 +12,3 @@ currently, flavors can only be queried through the admin api when admin_api is s
   - I need to understand what region is for in openstack
   - it only checks if machines boot correctly, but does not notice if a created instance
     enters an error state
-
-filtering by dns-name does not work, I will have to use instance id and I probably need to file a ticket
