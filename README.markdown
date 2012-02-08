@@ -9,7 +9,7 @@ Getting Started with OpenStack
 ===============================
 
 Before launching instances with the OpenStack Provisioner module, you'll need to build
-out a fully functional OpenStack instance.
+out a fully functional OpenStack environment.
 
 Devstack is the quickest way to build out a functional OpenStack environment on a single
 node for development.
@@ -17,8 +17,7 @@ node for development.
  * [DevStack](http://devstack.org)
 
 We are currently working on more robust modules that can be used to build out more complicated
-multi-node environments for OpenStack. Anyone interested in collaborating, can contact me at
-dan <at> puppetlabs <dot> com
+multi-node environments for OpenStack. Anyone interested in collaborating, can contact me as dan at puppetlabs dot com
 
  * [Puppet modules for OpenStack](https://github.com/puppetlabs/puppetlabs-openstack)
 
@@ -38,7 +37,7 @@ instances. Initial testing has been performed using the oneiric cloud image:
 
   http://uec-images.ubuntu.com/oneiric/current/oneiric-server-cloudimg-amd64.tar.gz
 
-Devstack will automatically create an image for the micro kernel Cirros which
+Devstack will automatically create an image for the micro OS Cirros which
 can be referenced as: ami-00000003. This image is sufficient for testing the
 provisioning component of OpenStack Provisioner, but it is not possible to install
 Puppet on this image.
