@@ -1,5 +1,5 @@
 name 'puppetlabs-node_openstack'
-version '0.0.1'
+version '0.0.2'
 dependency( 'puppetlabs-cloud_provisioner', '' )
 source 'https://github.com/puppetlabs/puppetlabs-node_openstack'
 author 'Puppet Labs'
