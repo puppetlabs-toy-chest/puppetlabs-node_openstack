@@ -11,13 +11,7 @@ Getting Started with OpenStack
 Before launching instances with the OpenStack Provisioner module, you'll need to build
 out a fully functional OpenStack environment.
 
-Devstack is the quickest way to build out a functional OpenStack environment on a single
-node for development.
-
- * [DevStack](http://devstack.org)
-
-We are currently working on more robust modules that can be used to build out more complicated
-multi-node environments for OpenStack. Anyone interested in collaborating, can contact me as dan at puppetlabs dot com
+We currently have modules that can be used to build out functional deployments:
 
  * [Puppet modules for OpenStack](https://github.com/puppetlabs/puppetlabs-openstack)
 
