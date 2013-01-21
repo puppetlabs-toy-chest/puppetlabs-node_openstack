@@ -18,6 +18,7 @@ Puppet::Face.define :node_openstack, '0.0.1' do
     EOT
 
     Puppet::CloudPack.add_platform_option(self)
+    Puppet::CloudPack.add_floating_ip_option(self)
     Puppet::CloudPack.add_availability_zone_option(self)
     Puppet::CloudPack.add_image_option(self)
     # TODO I am not sure if subnet should be supported
